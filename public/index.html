@@ -17,16 +17,14 @@
     </div>
     <script src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"></script>
     <script>
-        // Create a Landbot Access Point
-const myLandbot = new LandbotFrameWidget({
-  index: 'https://landbot.io/u/H-165144-ZPKURHL18PHDCNB5/index.html',
-  container:'#my-landbot',
-});
-
-myLandbot.on('landbot-msg-receive', (msg) => {
-  console.log(msg);
-});
-
+      const myLandbot = new LandbotFrameWidget({
+      index: 'https://landbot.io/u/H-165144-ZPKURHL18PHDCNB5/index.html',
+      container:'#my-landbot',
+      });
+      
+      myLandbot.on('landbot-msg-receive', (msg) => {
+      console.log(msg);
+      });
     </script>
 </body>
 </html>

@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <!-- Don't forget making your web responsive, mobile friendly -->
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>Landbot | Convert a Landing Page into a Chatbot</title>
-        <script src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"></script>
-      </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+</head>
+<body>
+    <div id="my-landbot" style="width: 100%; height:800px; position: relative; overflow: hidden;">
+    </div>
+    <script src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"></script>
+    <script>
+        // Create a Landbot Access Point
+const myLandbot = new LandbotFrameWidget({
+  index: 'https://landbot.io/u/H-165144-ZPKURHL18PHDCNB5/index.html',
+  container:'#my-landbot',
+});
 
-      <body>
-        <script>
-          const myLandbotFullpage = new LandbotFullpage({
-            // Use here the landbot URL you got from the app when creating your landbot.
-            index: 'https://landbot.io/u/H-165144-ZPKURHL18PHDCNB5/index.html',
-          });
-        </script>
-      </body>
+myLandbot.on('landbot-msg-receive', (msg) => {
+  console.log(msg);
+});
+
+    </script>
+</body>
 </html>

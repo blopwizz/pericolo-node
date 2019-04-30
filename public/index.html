@@ -15,11 +15,11 @@
 <body>
     <div id="my-landbot" style="width: 100%; height:800px; position: relative; overflow: hidden;">
     </div>
-    <script src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"></script>
+    <script src="./landbot-widget-1.0.0.js"></script>
     <script>
       const myLandbot = new LandbotFrameWidget({
-      index: 'https://landbot.io/u/H-165144-ZPKURHL18PHDCNB5/index.html',
-      container:'#my-landbot',
+        index: 'https://landbot.io/u/H-165144-ZPKURHL18PHDCNB5/index.html',
+        container:'#my-landbot',
       });
       
       myLandbot.on('landbot-msg-receive', (msg) => {
